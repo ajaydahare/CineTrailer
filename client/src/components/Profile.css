@@ -1,0 +1,215 @@
+
+.profile{
+    padding: 3rem ;
+    background: #2c3e50;
+    position: relative;
+    z-index: 1;
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile button.signout, button.cancel {
+    background: #ec215f;
+    padding: 0.6rem 1.5rem;
+    }
+    button.cancel {
+    margin-top: 3rem;
+    margin-bottom: auto;
+    }
+
+
+.profile__header{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: 3rem;
+width: 100%;
+max-width: 720px;
+}
+
+.profile__header img {
+    width: 2.5rem;
+    border-radius: 10px;
+    z-index: 2;
+    }
+.profile__header h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Work Sans';
+    margin: 0;
+    line-height: 1;
+    margin-right: auto;
+    margin-left: 1.5rem;
+    }
+    .logout__butoon,.cancel__sub{
+        background-color: #ec215f;
+        padding:  .75rem 1rem;
+        color:white;
+        font-weight: 700;
+        font-size: .825rem;
+        border: none;
+        outline: none;
+        border-radius: .5rem;
+        cursor: pointer;
+        transition: all .4s;
+    
+} 
+.cancel__sub{
+    width: 100%;
+    max-width: 250px;
+}
+.pack__deatils{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Work Sans';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+margin-bottom: auto;
+}
+.pack__expire{
+    font-size: 1.2rem;
+    background-color: #4ca1af;
+    padding: 0 5px;
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+
+.profile  h2{
+    margin-top: 3rem;
+    text-align: center;
+}
+.cancel__sub:hover,.logout__butoon:hover{
+    transform: scale(1.1)
+}
+
+.subscription__packs{
+    display: flex;
+flex-flow: row wrap;
+gap: 1rem;
+width: 100%;
+max-width: 1024px;
+margin: auto;
+margin-top: 0;
+justify-content: space-around;
+
+
+}
+.subscription__packs .subscription__pack{
+    background: white;
+border-radius: 0.5rem;
+flex: 0.25;
+color: #2c3e50;
+padding: 1rem;
+text-align: center;
+display: flex;
+flex-flow: column;
+max-width: 240px;
+transition: all 0.2s;
+}
+.subscription__packs .subscription__pack.subscription__pack__active{
+    background: #4ca1af;
+    color: white;
+    border: 2px rgba(255,255,255,1) solid;
+    position: relative;
+    overflow: hidden;
+    }
+
+.subscription__packs .subscription__pack.subscription__pack__active::before {
+    content: 'Active';
+    position: absolute;
+    transform: rotate(45deg) translate(30%, -120%) scale(0.8);
+    right: 0;
+    top: 0;
+    padding: 0.5rem 6rem;
+    background: #ec215f;
+    }
+.subscription__pack:hover{
+        transform: scale(1.055);
+}
+.subscription__pack >h3{
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+}
+
+.subscription__pack > ul{
+    width: 100%;
+margin-bottom: 3rem;
+padding: 0;
+list-style-type: none;
+
+}
+
+.pack__price > span{
+    color: black;
+    font-weight: 600;
+}
+
+
+
+
+.packActive__button{
+    width: 100%;
+    background-color: #4ca1af;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: all .4s;
+}
+.packActiveted__button{
+    width: 100%;
+    background-color: #44484d;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    transition: all .4s;
+}
+.packActive__button:hover{
+    transform: scale(1.025);
+}
+
+@media (max-width: 750px) {
+  
+    .subscription__packs .subscription__pack {
+    min-width: 240px;
+    max-width: 100%;
+    flex: 1;
+    }
+
+    }
+
+    @media (max-width: 550px) {
+        .profile{
+            padding-top: 5rem;
+        }
+
+        .profile__header h1 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-left: 0;
+           
+            }
+        .logout__butoon{
+            padding: .5rem .75rem;
+        } 
+        
+        .profile__header img {
+            display: none;
+            }
+    
+        }

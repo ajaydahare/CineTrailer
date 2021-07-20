@@ -1,0 +1,111 @@
+.loginScreen{
+    place-items: center; 
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    margin-top: 0;
+    background: #2c3e50;
+    position: relative;
+    z-index: 1;
+    display: grid;
+place-items: center;
+}
+
+
+.error__message {
+    padding: 0.5rem;
+    border: 1px rgba(180,230,30,0.25) solid;
+    color: rgb(231, 59, 59);
+    border-radius: 0.25rem;
+    background: rgba(180,230,30,0.15);
+    margin-bottom: 2rem;
+    animation: showError 0.5s ease-out;
+    text-align: center;
+    }
+    @keyframes showError {
+    from{transform: scale(0.5);opacity: 0;}
+    to{transform: scale(1); opacity: 1;}
+    }
+.login__container{  
+background: rgba(23,32,50,0.75);
+padding: 3rem;
+margin: 6rem 1.5rem 1.5rem 1.5rem;
+z-index: 99;
+border: 1px rgba(255,255,255,0.5) solid;
+border-radius: 1rem;
+width: 100%;
+max-width: 20rem;
+   
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+}
+.login__form > label{
+    font-weight: 500;
+    color: rgb(186, 199, 211);
+    margin: .325rem 0;
+}
+.login__form input{
+    background: #2c3e50;
+    padding: .7rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0.25rem;
+    color: #fff;
+    font-family: "Work Sans";
+    font-weight: 500;
+    transition: all .2s;
+    margin-bottom:.7rem ;
+}
+
+.login__form input:focus{
+    border: 1px solid #4ca1af;
+}
+.login__form button{
+    padding: .7rem 0;
+    margin-top: 1rem;
+    border-radius: 0.25rem;
+}
+.login__form button{
+    color: #fff;
+    /* border: none; */
+    outline-style: none;
+    font-weight: 600;
+    font-size: .95rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all .2s;
+}
+.login__form button:hover{
+    transform: scale(1.0225);
+}
+.login__button{
+    background-color: #4ca1af;
+    border: none;
+}
+
+.login__withGoogle{
+    background-color: rgba(16, 79, 104, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.login__withGoogle:hover{
+background-color: #4ca1af;
+}
+.sign__button a{
+    color: #4ca1af;
+    text-decoration: none;
+    margin-left: .5rem;
+}
+.sign__button a:hover{
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width:750px) {
+    .login__container{
+        padding: 3rem 1.5rem;
+max-width: 18rem;
+        
+        
+    }
+}

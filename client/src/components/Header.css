@@ -1,0 +1,128 @@
+.app__header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3rem;
+    z-index: 20;
+    
+}
+
+.app__headerBg{
+        background: #2c3e50;
+        box-shadow: 0 8px 6px -6px black;
+           
+}
+
+.brand__logo , .footerBrand__logo{
+    height: 4.5rem;
+	width: auto;
+	margin: 0;
+    cursor: pointer;
+}
+
+.appHeader__main {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+    position: fixed;
+    left: 3rem;
+}
+
+.appHeader__main li a {
+	text-transform: uppercase;
+transition: all 0.2s;
+}
+
+.appHeader__main li a.active {
+font-weight: 700;
+}
+.appHeader__main li+li {
+	margin-left: 2rem;
+}
+
+
+.app__search {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0.275rem 0;
+        padding-right: .5rem;
+        border: 2px solid #d1dadb;
+        border-radius: 99px;
+        transition: width 0.2s;
+        width: calc(1.25rem + 4px);
+        overflow: hidden;
+        cursor: pointer;
+}
+
+.app__user  a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+.app__search.open {
+	width: 12rem;
+}
+
+.search__icon {
+	margin-left: 10px;
+}
+
+.app__search input {
+	background: transparent;
+	color: #fff;
+	border: none;
+	width: 100%;
+	padding-right: 0.5rem;
+    font-size: .9rem;
+}
+
+.app__search form button {
+    display: none;
+}
+
+
+.app__user {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    border-radius: 10px;
+    background: #4ca1af;
+    padding: 0.135rem .5rem;
+    cursor: pointer;
+    position: fixed;
+    right: 3rem;
+    }
+    .app__user img {
+    width: 1.75rem;
+    border-radius: 10px;
+    z-index: 2;
+    }
+    .app__user span {
+        margin: 0;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    margin-left: .5rem;
+    }
+    
+    @media screen and (max-width:750px) {
+        .app__header{
+            padding: 2rem 1rem;
+            overflow: hidden;
+        }
+        .appHeader__main{
+            left: 1rem;
+        }
+        .app__user{
+            right: 1rem;
+        }
+        .appHeader__main li+li {
+            margin-left: 0;
+        }
+    }
